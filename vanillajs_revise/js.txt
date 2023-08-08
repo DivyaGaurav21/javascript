@@ -1,0 +1,45 @@
+================HOW JS WORKS=================
+
+Which of the following best describes an execution context?
+===================
+An execution context refers to the environment in which a piece of code is executed. 
+It includes the variables, functions, and objects that are accessible at a given 
+point in the code's execution.
+
+When is the global execution context created in a program?
+==================
+The global execution context is the default execution context that represent
+s the global scope of a program. It is created when the program starts running and
+ remains active throughout its execution.
+
+ What happens when multiple JS files are linked in a single HTML file?
+ =================
+ When multiple JavaScript files are linked in a single HTML file, a single execution
+  context is created for all js files. In JS, only one execution context is possible for 
+  a single html file.
+
+When does hoisting occur in JavaScript?
+==================
+During the Creation phase, the JavaScript engine scans through the code and identifies 
+variable and function declarations. It allocates memory for variables and creates
+ references for functions in the memory.
+
+Which is the recommended practice to avoid confusion of variables having value of 
+undefined due to hoisting?
+==================
+To avoid hoisting-related confusion in JavaScript, it's best practice to declare
+ variables and functions at the top of their scope so that when you use a variable, 
+ it has already been initialized.
+
+What is the purpose of the call stack in JS?
+=================
+The call stack in JavaScript manages the execution context of functions, tracks the order
+ of function calls, and handles errors and exceptions during code execution.
+
+ Which approach is followed by Call Stack?
+ ================
+ The call stack is implemented on stack data structure and follows LIFO principle. So the last
+  element added to the call stack will get executed first.
+
+  
+
