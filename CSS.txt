@@ -1,0 +1,54 @@
+=======================CSS======================
+
+===============TAILWIND CSS ====================
+Install tailwiind+vite for react
+npm create vite@latest my-project -- --template react
+cd my-project
+npm install -D tailwindcss@3 postcss autoprefixer
+npx tailwindcss init -p
+------->
+override tailwind.config.js
+by  
+content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+--------->
+include in index.css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+--------->
+download vscode extension (Tailwing CSS IntelliSense) for auto-suggestion
+--------->
+start developing project by 
+   npm run dev
+======================================>
+TEXT-COLOR(text-colorname-<50,100,200,300,400,500,600,700,800,900>)
+----------->
+FONT-FAMILY (font-sans , font-serif , font-mono)
+----------->
+FONT-SIZE (text-xs , text-sm , text-base , text-lg , 
+text-xl ,text-2xl, text-3xl, text-4xl,.............., text-9xl)
+custom -> text-[14px]
+----------->
+FONT-STYLE(italic , not-italic)
+----------->
+FONT-WEIGHT(font-thin , font-extralight, font-light , font-normal ,font-medium
+font-semibold,font-bold ,font-extrabold	,font-black)
+----------->
+LETTER-SPACING(tracking-tighter	,tracking-tight,tracking-normal ,
+tracking-wide,tracking-wider,tracking-widest )
+custom->tracking-[.25em]
+----------->
+LINE-HEIGHT(leading-3 ,leading-4, ........., leading-10)
+----------->
+LIST-STYLE(list-none, list-disc,list-decimal)
+----------->
+TEXT-ALIGN(text-left,text-center,text-right,text-justify,text-start,text-end)
+------------>
+TEXT-DECORATION(underline , overline , line-through , no-underline)
+------------>
+TEXT-TRANSFORM(uppercase , lowercase , capitalize )
+------------>
+

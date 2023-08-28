@@ -2,21 +2,21 @@
 //-------------------------------------------------------------------------------------//
 //-------------------Arrow Fn---------------//
 // const obj = {
-//     name: 'John',
-//     greet: function() {
-//       setTimeout(() => {
-//         console.log(`Hello, ${this.name}!`); // `this` refers to obj
-//       }, 1000);
-//     }
-//   };
-//   obj.greet(); // Output: Hello, John!
+//   name: 'John',
+//   greet: function () {
+//     setTimeout(() => {
+//       console.log(`Hello, ${this.name}!`); // `this` refers to obj
+//     }, 1000);
+//   }
+// };
+// obj.greet(); // Output: Hello, John!
 // // -------//
 // const multiplyNumbers = (a, b) => a * b;
 // console.log(multiplyNumbers(2, 3)); // Output: 6
 // // -------//
 // const addNumbers = (a, b) => {
-//     return a + b;
-//   };
+//   return a + b;
+// };
 // console.log(addNumbers(2, 3)); // Output: 5
 
 // ---------------------------------------//
@@ -25,32 +25,32 @@
 // arguments to functions, or create new arrays with existing elements.
 //  The spread syntax uses the ellipsis (...) notation.
 
-const numbers = [1, 2, 3];
-const expandedNumbers = [...numbers, 4, 5];
-console.log(expandedNumbers); // Output: [1, 2, 3, 4, 5]
-// --------//
-const originalArray = [1, 2, 3];
-const copiedArray = [...originalArray];
-console.log(copiedArray); // Output: [1, 2, 3]
-// -------//
-function sum(a, b, c) {
-    return a + b + c;
-  }
-//   const numbers = [1, 2, 3];
-//   const result = sum(...numbers);
-//   console.log(result); // Output: 6
+// const numbers = [1, 2, 3];
+// const expandedNumbers = [...numbers, 4, 5];
+// console.log(expandedNumbers); // Output: [1, 2, 3, 4, 5]
+// // --------//
+// const originalArray = [1, 2, 3];
+// const copiedArray = [...originalArray];
+// console.log(copiedArray); // Output: [1, 2, 3]
+// // -------//
+// function sum(a, b, c) {
+//   return a + b + c;
+// }
+// const numbers = [1, 2, 3];
+// const result = sum(...numbers);
+// console.log(result); // Output: 6
 // // -------//
 // const person = {
-//     name: 'John',
-//     age: 30,
-//     profession: 'Engineer'
-//   };
-//   // Update the age property
-//   const updatedPerson = {
-//     ...person,
-//     age: 31
-//   };
-//   console.log(updatedPerson);
+//   name: 'John',
+//   age: 30,
+//   profession: 'Engineer'
+// };
+// // Update the age property
+// const updatedPerson = {
+//   ...person,
+//   age: 31
+// };
+// console.log(updatedPerson);
 // ----------------------------------//
 
 //-------Rest Parameter--------------//
@@ -58,21 +58,21 @@ function sum(a, b, c) {
 //  function to accept an indefinite number of arguments as an array
 
 // function sum(...numbers) {
-//     let total = 0;
-//     for (let num of numbers) {
-//       total += num;
-//     }
-//     return total;
+//   let total = 0;
+//   for (let num of numbers) {
+//     total += num;
 //   }
-//   console.log(sum(1, 2, 3));               // Output: 6
-//   console.log(sum(4, 5, 6, 7, 8));         // Output: 30
-//   console.log(sum(2, 4, 6, 8, 10, 12));    // Output: 42
+//   return total;
+// }
+// console.log(sum(1, 2, 3));               // Output: 6
+// console.log(sum(4, 5, 6, 7, 8));         // Output: 30
+// console.log(sum(2, 4, 6, 8, 10, 12));    // Output: 42
 // ------------//
 // function concatenate(separator, ...strings) {
-//     return strings.join(separator);
-//   }
-//   console.log(concatenate('-', 'a', 'b', 'c'));   // Output: 'a-b-c'
-//   console.log(concatenate(' ', 'Hello', 'World')); // Output: 'Hello World'
+//   return strings.join(separator);
+// }
+// console.log(concatenate('-', 'a', 'b', 'c'));   // Output: 'a-b-c'
+// console.log(concatenate(' ', 'Hello', 'World')); // Output: 'Hello World'
 
 //--------Terniary operator----------//
 // const age = 25;
@@ -87,14 +87,14 @@ function sum(a, b, c) {
 // ------------------------------------//
 // conditional rendering with logical operator
 // function checkPermissions(user) {
-//     return user && user.isAdmin ? "Admin" : "Regular User";
-//   }
-//   // Usage
-//   const user = {
-//     name: "John Doe",
-//     isAdmin: true
-//   };
-//   console.log(checkPermissions(user)); // Output: "Admin"
+//   return user && user.isAdmin ? "Admin" : "Regular User";
+// }
+// // Usage
+// const user = {
+//   name: "John Doe",
+//   isAdmin: true
+// };
+// console.log(checkPermissions(user)); // Output: "Admin"
 // // -------
 // console.log(true && 'some string');
 // console.log(false && 'no string')
@@ -150,12 +150,12 @@ function sum(a, b, c) {
 // console.log(evenNumbers); // Output: [2, 4]
 // ------//
 // const employees = [
-//     { id: 1, name: "John", salary: 50000 },
-//     { id: 2, name: "Jane", salary: 60000 },
-//     { id: 3, name: "Tom", salary: 70000 }
-//   ];
-//   const highEarners = employees.filter((employee) => employee.salary >= 60000);
-//   console.log(highEarners);
+//   { id: 1, name: "John", salary: 50000 },
+//   { id: 2, name: "Jane", salary: 60000 },
+//   { id: 3, name: "Tom", salary: 70000 }
+// ];
+// const highEarners = employees.filter((employee) => employee.salary >= 60000);
+// console.log(highEarners);
 //   // Output: [
 //   //   { id: 2, name: "Jane", salary: 60000 },
 //   //   { id: 3, name: "Tom", salary: 70000 }
@@ -204,7 +204,7 @@ function sum(a, b, c) {
 // --------------//
 // const numbers = [65, 44, 12, 4];
 // function myFunction(item, index, arr) {
-//     arr[index] = item * 10;
+//   arr[index] = item * 10;
 // }
 // numbers.forEach(myFunction)
 // console.log(numbers)
@@ -287,33 +287,33 @@ function sum(a, b, c) {
 // ---------------//
 // FOR IN LOOP FOR OBJECT
 // const person = {
-//     name: 'John Doe',
-//     age: 30,
-//     occupation: 'Engineer',
+//   name: 'John Doe',
+//   age: 30,
+//   occupation: 'Engineer',
 // };
 // for (const key in person) {
-//     if (person.hasOwnProperty(key)) {
-//         console.log(`${key}: ${person[key]}`);
-//     }
+//   if (person.hasOwnProperty(key)) {
+//     console.log(`${key}: ${person[key]}`);
+//   }
 // }
 //--------------------------------------------//
 // let sec = 1;
 // function task() {
-//     console.log(`john after ${sec} second`)
-//     sec++;
-//     if (sec === 6) {
-//         clearInterval(id);
-//     }
+//   console.log(`john after ${sec} second`)
+//   sec++;
+//   if (sec === 6) {
+//     clearInterval(id);
+//   }
 // }
 // let id = setInterval(task, 1000);
 // -----------------//
 // let person = {
-//     name: 'john',
-//     age: 25,
+//   name: 'john',
+//   age: 25,
 // };
 // function greet(person) {
-//     person.name = `Mr ${person.name}`;
-//     return `Welcome ${person.name}`;
+//   person.name = `Mr ${person.name}`;
+//   return `Welcome ${person.name}`;
 // }
 // console.log(greet(person));
 // console.log(person.name);
@@ -321,13 +321,13 @@ function sum(a, b, c) {
 // -------------------------------------------------------------------------------------//
 // HIGH ORDER FUNC
 // function performOperation(num1, num2, operationCallback) {
-//     return operationCallback(num1, num2);
+//   return operationCallback(num1, num2);
 // }
 // function add(a, b) {
-//     return a + b;
+//   return a + b;
 // }
 // function multiply(a, b) {
-//     return a * b;
+//   return a * b;
 // }
 // console.log(performOperation(5, 3, add));      // Output: 8 (5 + 3)
 // console.log(performOperation(5, 3, multiply)); // Output: 15 (5 * 3)
@@ -335,9 +335,9 @@ function sum(a, b, c) {
 // ---------------//
 // HIGH ORDER FUNC
 // function createGreetingGenerator(greeting) {
-//     return function (name) {
-//         return `${greeting}, ${name}!`;
-//     };
+//   return function (name) {
+//     return `${greeting}, ${name}!`;
+//   };
 // }
 
 // const sayHello = createGreetingGenerator('Hello');
@@ -362,14 +362,14 @@ function sum(a, b, c) {
 // ---------------//
 // CALLBACK FUNC
 // function fetchDataFromServer(callback) {
-//     // Simulate asynchronous data fetching from a server
-//     setTimeout(function () {
-//         const data = { message: "Hello, world!" };
-//         callback(data); // Execute the callback function with the retrieved data
-//     }, 1000);
+//   // Simulate asynchronous data fetching from a server
+//   setTimeout(function () {
+//     const data = { message: "Hello, world!" };
+//     callback(data); // Execute the callback function with the retrieved data
+//   }, 1000);
 // }
 // function processData(data) {
-//     console.log(data.message);
+//   console.log(data.message);
 // }
 // fetchDataFromServer(processData);
 // console.log("gaurav")
@@ -397,7 +397,7 @@ function sum(a, b, c) {
 // Output: true (At least one element is even)
 // -----------------//
 // SORTING IN CASE OF NUMBER ELEMENT IN ARRAY
-// const numbers = [5, 2, 9, 1, 5, 6];
+const numbers = [5, 2, 9, 1, 5, 6];
 // Sorting in ascending order using the compare function
 // numbers.sort((a, b) => a - b);
 // console.log(numbers); // Output: [1, 2, 5, 5, 6, 9]
@@ -427,7 +427,7 @@ function sum(a, b, c) {
 // substr() is similar to slice().
 // The difference is that the second parameter specifies the length of the extracted part.
 // let str = "Apple, Banana ,Kiwi";
-// let part = str.substr(7, 6);
+// let part = str.substr(-7, 6);
 // console.log(part);
 
 //str.replace()
@@ -507,34 +507,8 @@ function sum(a, b, c) {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 // =======================OOPS====================//
-// 'use strict';
-// Constructor Functions and the new Operator
-// const Person = function (firstName, birthYear) {
-//   // Instance properties
-//   this.firstName = firstName;
-//   this.birthYear = birthYear;
-//   // Never to this!
-// //   this.calcAge = function () {
-// //     console.log(2037 - this.birthYear);
-// //   };
-// };
-// const jonas = new Person('Jonas', 1991);
-// // console.log(jonas instanceof Person);
-// // console.log(jonas.__proto__.__proto__.__proto__);
-// // // console.log(jonas.calcAge());
+
 // // ---------------------------------------//
 // const matilda = new Person('Matilda', 2017);
 // const jack = new Person('Jack', 1975);
@@ -546,7 +520,8 @@ function sum(a, b, c) {
 // Person.hey();
 // ---------------------------------------------//
 // Prototypes
-// console.log(Person.prototype);
+// let Person = { name: 'divya' }
+// console.log(Person);
 
 // Person.prototype.calcAge = function () {
 //   console.log(2037 - this.birthYear);
@@ -598,7 +573,7 @@ function sum(a, b, c) {
 ///////////////////////////////////////
 // Coding Challenge #1
 
-/* 
+/*
 1. Use a constructor function to implement a Car. A car has a make and a speed property. The speed property is the current speed of the car in km/h;
 2. Implement an 'accelerate' method that will increase the car's speed by 10, and log the new speed to the console;
 3. Implement a 'brake' method that will decrease the car's speed by 5, and log the new speed to the console;
@@ -749,7 +724,7 @@ sarah.calcAge();
 ///////////////////////////////////////
 // Coding Challenge #2
 
-/* 
+/*
 1. Re-create challenge 1, but this time using an ES6 class;
 2. Add a getter called 'speedUS' which returns the current speed in mi/h (divide by 1.6);
 3. Add a setter called 'speedUS' which sets the current speed in mi/h (but converts it to km/h before storing the value, by multiplying the input by 1.6);
@@ -837,7 +812,7 @@ console.dir(Student.prototype.constructor);
 ///////////////////////////////////////
 // Coding Challenge #3
 
-/* 
+/*
 1. Use a constructor function to implement an Electric Car (called EV) as a CHILD "class" of Car. Besides a make and current speed, the EV also has the current battery charge in % ('charge' property);
 2. Implement a 'chargeBattery' method which takes an argument 'chargeTo' and sets the battery charge to 'chargeTo';
 3. Implement an 'accelerate' method that will increase the car's speed by 20, and decrease the charge by 1%. Then log a message like this: 'Tesla going at 140 km/h, with a charge of 22%';
@@ -848,555 +823,603 @@ DATA CAR 1: 'Tesla' going at 120 km/h, with a charge of 23%
 GOOD LUCK 😀
 */
 
-/*
-const Car = function (make, speed) {
-  this.make = make;
-  this.speed = speed;
-};
-
-Car.prototype.accelerate = function () {
-  this.speed += 10;
-  console.log(`${this.make} is going at ${this.speed} km/h`);
-};
-
-Car.prototype.brake = function () {
-  this.speed -= 5;
-  console.log(`${this.make} is going at ${this.speed} km/h`);
-};
-
-const EV = function (make, speed, charge) {
-  Car.call(this, make, speed);
-  this.charge = charge;
-};
-
-// Link the prototypes
-EV.prototype = Object.create(Car.prototype);
-
-EV.prototype.chargeBattery = function (chargeTo) {
-  this.charge = chargeTo;
-};
-
-EV.prototype.accelerate = function () {
-  this.speed += 20;
-  this.charge--;
-  console.log(
-    `${this.make} is going at ${this.speed} km/h, with a charge of ${this.charge}`
-  );
-};
-
-const tesla = new EV('Tesla', 120, 23);
-tesla.chargeBattery(90);
-console.log(tesla);
-tesla.brake();
-tesla.accelerate();
-
-
-///////////////////////////////////////
-// Inheritance Between "Classes": ES6 Classes
-
-class PersonCl {
-  constructor(fullName, birthYear) {
-    this.fullName = fullName;
-    this.birthYear = birthYear;
-  }
-
-  // Instance methods
-  calcAge() {
-    console.log(2037 - this.birthYear);
-  }
-
-  greet() {
-    console.log(`Hey ${this.fullName}`);
-  }
-
-  get age() {
-    return 2037 - this.birthYear;
-  }
-
-  set fullName(name) {
-    if (name.includes(' ')) this._fullName = name;
-    else alert(`${name} is not a full name!`);
-  }
-
-  get fullName() {
-    return this._fullName;
-  }
-
-  // Static method
-  static hey() {
-    console.log('Hey there 👋');
-  }
-}
-
-class StudentCl extends PersonCl {
-  constructor(fullName, birthYear, course) {
-    // Always needs to happen first!
-    super(fullName, birthYear);
-    this.course = course;
-  }
-
-  introduce() {
-    console.log(`My name is ${this.fullName} and I study ${this.course}`);
-  }
-
-  calcAge() {
-    console.log(
-      `I'm ${
-        2037 - this.birthYear
-      } years old, but as a student I feel more like ${
-        2037 - this.birthYear + 10
-      }`
-    );
-  }
-}
-
-const martha = new StudentCl('Martha Jones', 2012, 'Computer Science');
-martha.introduce();
-martha.calcAge();
-
-
-///////////////////////////////////////
-// Inheritance Between "Classes": Object.create
-
-const PersonProto = {
-  calcAge() {
-    console.log(2037 - this.birthYear);
-  },
-
-  init(firstName, birthYear) {
-    this.firstName = firstName;
-    this.birthYear = birthYear;
-  },
-};
-
-const steven = Object.create(PersonProto);
-
-const StudentProto = Object.create(PersonProto);
-StudentProto.init = function (firstName, birthYear, course) {
-  PersonProto.init.call(this, firstName, birthYear);
-  this.course = course;
-};
-
-StudentProto.introduce = function () {
-  // BUG in video:
-  // console.log(`My name is ${this.fullName} and I study ${this.course}`);
-  
-  // FIX:
-  console.log(`My name is ${this.firstName} and I study ${this.course}`);
-};
-
-const jay = Object.create(StudentProto);
-jay.init('Jay', 2010, 'Computer Science');
-jay.introduce();
-jay.calcAge();
-
-
-///////////////////////////////////////
-// Encapsulation: Protected Properties and Methods
-// Encapsulation: Private Class Fields and Methods
-
-// 1) Public fields
-// 2) Private fields
-// 3) Public methods
-// 4) Private methods
-// (there is also the static version)
-
-class Account {
-  // 1) Public fields (instances)
-  locale = navigator.language;
-
-  // 2) Private fields (instances)
-  #movements = [];
-  #pin;
-
-  constructor(owner, currency, pin) {
-    this.owner = owner;
-    this.currency = currency;
-    this.#pin = pin;
-
-    // Protected property
-    // this._movements = [];
-    // this.locale = navigator.language;
-
-    console.log(`Thanks for opening an account, ${owner}`);
-  }
-
-  // 3) Public methods
-
-  // Public interface
-  getMovements() {
-    return this.#movements;
-  }
-
-  deposit(val) {
-    this.#movements.push(val);
-    return this;
-  }
-
-  withdraw(val) {
-    this.deposit(-val);
-    return this;
-  }
-
-  requestLoan(val) {
-    // if (this.#approveLoan(val)) {
-    if (this._approveLoan(val)) {
-      this.deposit(val);
-      console.log(`Loan approved`);
-      return this;
-    }
-  }
-
-  static helper() {
-    console.log('Helper');
-  }
-
-  // 4) Private methods
-  // #approveLoan(val) {
-  _approveLoan(val) {
-    return true;
-  }
-}
-
-const acc1 = new Account('Jonas', 'EUR', 1111);
-
-// acc1._movements.push(250);
-// acc1._movements.push(-140);
-// acc1.approveLoan(1000);
-
-acc1.deposit(250);
-acc1.withdraw(140);
-acc1.requestLoan(1000);
-console.log(acc1.getMovements());
-console.log(acc1);
-Account.helper();
-
-// console.log(acc1.#movements);
-// console.log(acc1.#pin);
-// console.log(acc1.#approveLoan(100));
-
-// Chaining
-acc1.deposit(300).deposit(500).withdraw(35).requestLoan(25000).withdraw(4000);
-console.log(acc1.getMovements());
-*/
-
-///////////////////////////////////////
-// Coding Challenge #4
-
-/* 
-1. Re-create challenge #3, but this time using ES6 classes: create an 'EVCl' child class of the 'CarCl' class
-2. Make the 'charge' property private;
-3. Implement the ability to chain the 'accelerate' and 'chargeBattery' methods of this class, and also update the 'brake' method in the 'CarCl' class. They experiment with chining!
-
-DATA CAR 1: 'Rivian' going at 120 km/h, with a charge of 23%
-
-GOOD LUCK 😀
-*/
-
-/*
-class CarCl {
-  constructor(make, speed) {
-    this.make = make;
-    this.speed = speed;
-  }
-
-  accelerate() {
-    this.speed += 10;
-    console.log(`${this.make} is going at ${this.speed} km/h`);
-  }
-
-  brake() {
-    this.speed -= 5;
-    console.log(`${this.make} is going at ${this.speed} km/h`);
-    return this;
-  }
-
-  get speedUS() {
-    return this.speed / 1.6;
-  }
-
-  set speedUS(speed) {
-    this.speed = speed * 1.6;
-  }
-}
-
-class EVCl extends CarCl {
-  #charge;
-
-  constructor(make, speed, charge) {
-    super(make, speed);
-    this.#charge = charge;
-  }
-
-  chargeBattery(chargeTo) {
-    this.#charge = chargeTo;
-    return this;
-  }
-
-  accelerate() {
-    this.speed += 20;
-    this.#charge--;
-    console.log(
-      `${this.make} is going at ${this.speed} km/h, with a charge of ${
-        this.#charge
-      }`
-    );
-    return this;
-  }
-}
-
-const rivian = new EVCl('Rivian', 120, 23);
-console.log(rivian);
-// console.log(rivian.#charge);
-rivian
-  .accelerate()
-  .accelerate()
-  .accelerate()
-  .brake()
-  .chargeBattery(50)
-  .accelerate();
-
-console.log(rivian.speedUS);
-*/
-
-
-
-
-
-
-
-
-// ==============================================================//
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// -----------------------------------------------------------------------------------//
-// FUNCTION
-// function sum(a , b , c){
-//     console.log(a, b, c)
-//     return a+b+c;
-// }
-// console.log(sum(3, 5)) //5+undefined = NaN
-
-// ----------------->
-// let nam = 'global';
-// function scpoeDemo(){
-//    nam = "divya"
-//     console.log(nam);
-// }
-// scpoeDemo()
-// console.log(nam)
-// -------------->
-// let nam = 'global';
-// function scpoeDemo(){
-//   let nam = "divya"
-//     console.log(nam);
-// }
-// scpoeDemo()
-// console.log(nam)
-// ------------>
-// function scope
-// function outer(){
-//     var outerVar = 10;
-//     function inner(){
-//         console.log(outerVar)
-//     }
-//     inner()
-// }
-// outer();
-// inner()
-// -------->
-// console.log(factorial(5))
-// console.log(factorial)
-// var factorial = function (n){
-//     var ans = 1;
-//     for(var i=1; i<=n; i++){
-//         ans*=i;
-//     }
-//     return ans;
-// }
-// ------------------------------------------------------------------------//
-// Can arrow function be hoisted?
-// Arrow functions are not hoisted as they are also function
-// expressions where the function is assigned as a value to the variable.
-// ------------->
-// function call Inside function
-// let combineStr = '';
-// function a(){
-//     combineStr = 'inside a'
-//     function b(){
-//         combineStr = combineStr + ' inside b'
-//     }
-//     b()
-// }
-// a();
-// console.log(combineStr);
-// ------------->
-// var nam = 'global';
-// function outer(){
-//     var nam = 'outer';
-//     var outerVar = 10;
-//     function inner(){
-//         var nam = 'inner'
-//         var innerVar = 100;
-//         console.log(nam , outerVar);
-//     }
-//     inner();
-//     console.log(nam)
-// }
-// outer();
-// console.log(nam);
-
-// -------------->
-// const arr = [2,3,4,5]
-// arr.splice(11, 1 , 999)
-// console.log(arr);
-// --------->
-// var color = ['red', 'blue', 'orange' , 'violet'];
-// var removed = color.splice(2);
-// console.log(removed)
-// console.log(color)
-// ------------->
-// delete keyword used in object
-// var student = {
-//     'name' : 'dg',
-//     'age' : 25
-// }
-// console.log(student)
-// delete student.age;
-// console.log(student)
-
-// ----------------------------------------------------------------------//
-
-//-------Destructuring of array-----
-// const numbers = [1, 2, 3, 4, 5];
-// // Destructuring assignment
-// const [first, second, ...rest] = numbers;
-// console.log(first);  // Output: 1
-// console.log(second); // Output: 2
-// console.log(rest);   // Output: [3, 4, 5]
-// //-------Destructuring of object----
-// const person = {
-//     name: 'John Doe',
-//     age: 30,
-//     profession: 'Engineer'
-//   };
-//   // Destructuring assignment
-//   const { name, age, profession } = person;
-  
-//   console.log(name);       // Output: John Doe
-//   console.log(age);        // Output: 30
-//   console.log(profession); // Output: Engineer
-
-// -----------------------------------------------------//
-
-// // -----------------------------------
-// // continue and break
-// console.log('--- ONLY STRINGS ---')
-// for (let i = 0; i < jonas.length; i++) {
-//   if (typeof jonas[i] !== 'string') continue;
-//   console.log(jonas[i], typeof jonas[i]);
-// }
-
-// console.log('--- BREAK WITH NUMBER ---')
-// for (let i = 0; i < jonas.length; i++) {
-//   if (typeof jonas[i] === 'number') break;
-
-//   console.log(jonas[i], typeof jonas[i]);
-// }
-// for (let i = jonas.length - 1; i >= 0; i--) {
-//   console.log(i, jonas[i]);
-// }
-
-// for (let exercise = 1; exercise < 4; exercise++) {
-//   console.log(`-------- Starting exercise ${exercise}`);
-
-//   for (let rep = 1; rep < 6; rep++) {
-//     console.log(`Exercise ${exercise}: Lifting weight repetition ${rep} 🏋️‍♀️`);
+// const Car = function (make, speed) {
+//   this.make = make;
+//   this.speed = speed;
+// };
+
+// Car.prototype.accelerate = function () {
+//   this.speed += 10;
+//   console.log(`${this.make} is going at ${this.speed} km/h`);
+// };
+
+// Car.prototype.brake = function () {
+//   this.speed -= 5;
+//   console.log(`${this.make} is going at ${this.speed} km/h`);
+// };
+
+// const EV = function (make, speed, charge) {
+//   Car.call(this, make, speed);
+//   this.charge = charge;
+// };
+
+// // Link the prototypes
+// EV.prototype = Object.create(Car.prototype);
+
+// EV.prototype.chargeBattery = function (chargeTo) {
+//   this.charge = chargeTo;
+// };
+
+// EV.prototype.accelerate = function () {
+//   this.speed += 20;
+//   this.charge--;
+//   console.log(
+//     `${this.make} is going at ${this.speed} km/h, with a charge of ${this.charge}`
+//   );
+// };
+
+// const tesla = new EV('Tesla', 120, 23);
+// tesla.chargeBattery(90);
+// console.log(tesla);
+// tesla.brake();
+// tesla.accelerate();
+
+
+// ///////////////////////////////////////
+// // Inheritance Between "Classes": ES6 Classes
+
+// class PersonCl {
+//   constructor(fullName, birthYear) {
+//     this.fullName = fullName;
+//     this.birthYear = birthYear;
+//   }
+
+//   // Instance methods
+//   calcAge() {
+//     console.log(2037 - this.birthYear);
+//   }
+
+//   greet() {
+//     console.log(`Hey ${this.fullName}`);
+//   }
+
+//   get age() {
+//     return 2037 - this.birthYear;
+//   }
+
+//   set fullName(name) {
+//     if (name.includes(' ')) this._fullName = name;
+//     else alert(`${name} is not a full name!`);
+//   }
+
+//   get fullName() {
+//     return this._fullName;
+//   }
+
+//   // Static method
+//   static hey() {
+//     console.log('Hey there 👋');
 //   }
 // }
-// // -----------------
-// // The while Loop
-// for (let rep = 1; rep <= 10; rep++) {
-//   console.log(`Lifting weights repetition ${rep} 🏋️‍♀️`);
+
+// class StudentCl extends PersonCl {
+//   constructor(fullName, birthYear, course) {
+//     // Always needs to happen first!
+//     super(fullName, birthYear);
+//     this.course = course;
+//   }
+
+//   introduce() {
+//     console.log(`My name is ${this.fullName} and I study ${this.course}`);
+//   }
+
+//   calcAge() {
+//     console.log(
+//       `I'm ${2037 - this.birthYear
+//       } years old, but as a student I feel more like ${2037 - this.birthYear + 10
+//       }`
+//     );
+//   }
 // }
 
-// let rep = 1;
-// while (rep <= 10) {
-//   // console.log(`WHILE: Lifting weights repetition ${rep} 🏋️‍♀️`);
-//   rep++;
-// }
+// const martha = new StudentCl('Martha Jones', 2012, 'Computer Science');
+// martha.introduce();
+// martha.calcAge();
 
-// let dice = Math.trunc(Math.random() * 6) + 1;
 
-// while (dice !== 6) {
-//   console.log(`You rolled a ${dice}`);
-//   dice = Math.trunc(Math.random() * 6) + 1;
-//   if (dice === 6) console.log('Loop is about to end...');
-// }
+// ///////////////////////////////////////
+// // Inheritance Between "Classes": Object.create
 
-//-------------------------------------------------------------
+// const PersonProto = {
+//   calcAge() {
+//     console.log(2037 - this.birthYear);
+//   },
 
-// -------------------AJAX--------------//
-
-// const xhr = new XMLHttpRequest();
-// const url = "https://jsonplaceholder.typicode.com/users"; // Replace with the actual API endpoint
-// console.log(XMLHttpRequest.DONE)
-// xhr.open("GET", url, false);
-
-// xhr.onreadystatechange = function () {
-//     if (xhr.readyState === XMLHttpRequest.DONE) {
-//         if (xhr.status === 200) {
-//             const responseData = JSON.parse(xhr.responseText);
-//             console.log(responseData); // Process the received data here
-//         } else {
-//             console.error("Error occurred while fetching data.");
-//         }
-//     }
+//   init(firstName, birthYear) {
+//     this.firstName = firstName;
+//     this.birthYear = birthYear;
+//   },
 // };
-// xhr.send();
-// console.log("asyncronous operation");
 
-//=======================THE END=========================//
+// const steven = Object.create(PersonProto);
+// console.log(steven)
+// const StudentProto = Object.create(PersonProto);
+// StudentProto.init = function (firstName, birthYear, course) {
+//   PersonProto.init.call(this, firstName, birthYear);
+//   this.course = course;
+// };
 
-  
+// StudentProto.introduce = function () {
+//   // BUG in video:
+//   // console.log(`My name is ${this.fullName} and I study ${this.course}`);
+
+//   // FIX:
+//   console.log(`My name is ${this.firstName} and I study ${this.course}`);
+// };
+
+// const jay = Object.create(StudentProto);
+// jay.init('Jay', 2010, 'Computer Science');
+// jay.introduce();
+// jay.calcAge();
+
+
+// ///////////////////////////////////////
+// // Encapsulation: Protected Properties and Methods
+// // Encapsulation: Private Class Fields and Methods
+
+// // 1) Public fields
+// // 2) Private fields
+// // 3) Public methods
+// // 4) Private methods
+// // (there is also the static version)
+
+// class Account {
+//   // 1) Public fields (instances)
+//   locale = navigator.language;
+
+//   // 2) Private fields (instances)
+//   #movements = [];
+//   #pin;
+
+//   constructor(owner, currency, pin) {
+//     this.owner = owner;
+//     this.currency = currency;
+//     this.#pin = pin;
+
+//     // Protected property
+//     // this._movements = [];
+//     // this.locale = navigator.language;
+
+//     console.log(`Thanks for opening an account, ${owner}`);
+//   }
+
+//   // 3) Public methods
+
+//   // Public interface
+//   getMovements() {
+//     return this.#movements;
+//   }
+
+//   deposit(val) {
+//     this.#movements.push(val);
+//     return this;
+//   }
+
+//   withdraw(val) {
+//     this.deposit(-val);
+//     return this;
+//   }
+
+//   requestLoan(val) {
+//     // if (this.#approveLoan(val)) {
+//     if (this._approveLoan(val)) {
+//       this.deposit(val);
+//       console.log(`Loan approved`);
+//       return this;
+//     }
+//   }
+
+//   static helper() {
+//     console.log('Helper');
+//   }
+
+//   // 4) Private methods
+//   // #approveLoan(val) {
+//   _approveLoan(val) {
+//     return true;
+//   }
+// }
+
+// const acc1 = new Account('Jonas', 'EUR', 1111);
+
+// // acc1._movements.push(250);
+// // acc1._movements.push(-140);
+// // acc1.approveLoan(1000);
+
+// acc1.deposit(250);
+// acc1.withdraw(140);
+// acc1.requestLoan(1000);
+// console.log(acc1.getMovements());
+// console.log(acc1);
+// Account.helper();
+
+// // console.log(acc1.#movements);
+// // console.log(acc1.#pin);
+// // console.log(acc1.#approveLoan(100));
+
+// // Chaining
+// acc1.deposit(300).deposit(500).withdraw(35).requestLoan(25000).withdraw(4000);
+// console.log(acc1.getMovements());
+// */
+
+// ///////////////////////////////////////
+// // Coding Challenge #4
+
+// /*
+// 1. Re-create challenge #3, but this time using ES6 classes: create an 'EVCl' child class of the 'CarCl' class
+// 2. Make the 'charge' property private;
+// 3. Implement the ability to chain the 'accelerate' and 'chargeBattery' methods of this class, and also update the 'brake' method in the 'CarCl' class. They experiment with chining!
+
+// DATA CAR 1: 'Rivian' going at 120 km/h, with a charge of 23%
+
+// GOOD LUCK 😀
+// */
+
+// /*
+// class CarCl {
+//   constructor(make, speed) {
+//     this.make = make;
+//     this.speed = speed;
+//   }
+
+//   accelerate() {
+//     this.speed += 10;
+//     console.log(`${this.make} is going at ${this.speed} km/h`);
+//   }
+
+//   brake() {
+//     this.speed -= 5;
+//     console.log(`${this.make} is going at ${this.speed} km/h`);
+//     return this;
+//   }
+
+//   get speedUS() {
+//     return this.speed / 1.6;
+//   }
+
+//   set speedUS(speed) {
+//     this.speed = speed * 1.6;
+//   }
+// }
+
+// class EVCl extends CarCl {
+//   #charge;
+
+//   constructor(make, speed, charge) {
+//     super(make, speed);
+//     this.#charge = charge;
+//   }
+
+//   chargeBattery(chargeTo) {
+//     this.#charge = chargeTo;
+//     return this;
+//   }
+
+//   accelerate() {
+//     this.speed += 20;
+//     this.#charge--;
+//     console.log(
+//       `${this.make} is going at ${this.speed} km/h, with a charge of ${
+//         this.#charge
+//       }`
+//     );
+//     return this;
+//   }
+// }
+
+// const rivian = new EVCl('Rivian', 120, 23);
+// console.log(rivian);
+// // console.log(rivian.#charge);
+// rivian
+//   .accelerate()
+//   .accelerate()
+//   .accelerate()
+//   .brake()
+//   .chargeBattery(50)
+//   .accelerate();
+
+// console.log(rivian.speedUS);
+// */
 
 
 
-  
-
-
-  
-  
-
-  
-  
 
 
 
 
-  
-  
+
+// // ==============================================================//
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// // -----------------------------------------------------------------------------------//
+// // FUNCTION
+// // function sum(a , b , c){
+// //     console.log(a, b, c)
+// //     return a+b+c;
+// // }
+// // console.log(sum(3, 5)) //5+undefined = NaN
+
+// // ----------------->
+// // let nam = 'global';
+// // function scpoeDemo(){
+// //    nam = "divya"
+// //     console.log(nam);
+// // }
+// // scpoeDemo()
+// // console.log(nam)
+// // -------------->
+// // let nam = 'global';
+// // function scpoeDemo(){
+// //   let nam = "divya"
+// //     console.log(nam);
+// // }
+// // scpoeDemo()
+// // console.log(nam)
+// // ------------>
+// // function scope
+// // function outer(){
+// //     var outerVar = 10;
+// //     function inner(){
+// //         console.log(outerVar)
+// //     }
+// //     inner()
+// // }
+// // outer();
+// // inner()
+// // -------->
+// // console.log(factorial(5))
+// // console.log(factorial)
+// // var factorial = function (n){
+// //     var ans = 1;
+// //     for(var i=1; i<=n; i++){
+// //         ans*=i;
+// //     }
+// //     return ans;
+// // }
+// // ------------------------------------------------------------------------//
+// // Can arrow function be hoisted?
+// // Arrow functions are not hoisted as they are also function
+// // expressions where the function is assigned as a value to the variable.
+// // ------------->
+// // function call Inside function
+// // let combineStr = '';
+// // function a(){
+// //     combineStr = 'inside a'
+// //     function b(){
+// //         combineStr = combineStr + ' inside b'
+// //     }
+// //     b()
+// // }
+// // a();
+// // console.log(combineStr);
+// // ------------->
+// // var nam = 'global';
+// // function outer(){
+// //     var nam = 'outer';
+// //     var outerVar = 10;
+// //     function inner(){
+// //         var nam = 'inner'
+// //         var innerVar = 100;
+// //         console.log(nam , outerVar);
+// //     }
+// //     inner();
+// //     console.log(nam)
+// // }
+// // outer();
+// // console.log(nam);
+
+// // -------------->
+// // const arr = [2,3,4,5]
+// // arr.splice(11, 1 , 999)
+// // console.log(arr);
+// // --------->
+// // var color = ['red', 'blue', 'orange' , 'violet'];
+// // var removed = color.splice(2);
+// // console.log(removed)
+// // console.log(color)
+// // ------------->
+// // delete keyword used in object
+// // var student = {
+// //     'name' : 'dg',
+// //     'age' : 25
+// // }
+// // console.log(student)
+// // delete student.age;
+// // console.log(student)
+
+// // ----------------------------------------------------------------------//
+
+// //-------Destructuring of array-----
+// // const numbers = [1, 2, 3, 4, 5];
+// // // Destructuring assignment
+// // const [first, second, ...rest] = numbers;
+// // console.log(first);  // Output: 1
+// // console.log(second); // Output: 2
+// // console.log(rest);   // Output: [3, 4, 5]
+// // //-------Destructuring of object----
+// // const person = {
+// //     name: 'John Doe',
+// //     age: 30,
+// //     profession: 'Engineer'
+// //   };
+// //   // Destructuring assignment
+// //   const { name, age, profession } = person;
+
+// //   console.log(name);       // Output: John Doe
+// //   console.log(age);        // Output: 30
+// //   console.log(profession); // Output: Engineer
+
+// // -----------------------------------------------------//
+
+// // // -----------------------------------
+// // // continue and break
+// // console.log('--- ONLY STRINGS ---')
+// // for (let i = 0; i < jonas.length; i++) {
+// //   if (typeof jonas[i] !== 'string') continue;
+// //   console.log(jonas[i], typeof jonas[i]);
+// // }
+
+// // console.log('--- BREAK WITH NUMBER ---')
+// // for (let i = 0; i < jonas.length; i++) {
+// //   if (typeof jonas[i] === 'number') break;
+
+// //   console.log(jonas[i], typeof jonas[i]);
+// // }
+// // for (let i = jonas.length - 1; i >= 0; i--) {
+// //   console.log(i, jonas[i]);
+// // }
+
+// // for (let exercise = 1; exercise < 4; exercise++) {
+// //   console.log(`-------- Starting exercise ${exercise}`);
+
+// //   for (let rep = 1; rep < 6; rep++) {
+// //     console.log(`Exercise ${exercise}: Lifting weight repetition ${rep} 🏋️‍♀️`);
+// //   }
+// // }
+// // // -----------------
+// // // The while Loop
+// // for (let rep = 1; rep <= 10; rep++) {
+// //   console.log(`Lifting weights repetition ${rep} 🏋️‍♀️`);
+// // }
+
+// // let rep = 1;
+// // while (rep <= 10) {
+// //   // console.log(`WHILE: Lifting weights repetition ${rep} 🏋️‍♀️`);
+// //   rep++;
+// // }
+
+// // let dice = Math.trunc(Math.random() * 6) + 1;
+
+// // while (dice !== 6) {
+// //   console.log(`You rolled a ${dice}`);
+// //   dice = Math.trunc(Math.random() * 6) + 1;
+// //   if (dice === 6) console.log('Loop is about to end...');
+// // }
+
+// //-------------------------------------------------------------
+
+// // -------------------AJAX--------------//
+
+// // const xhr = new XMLHttpRequest();
+// // const url = "https://jsonplaceholder.typicode.com/users"; // Replace with the actual API endpoint
+// // console.log(XMLHttpRequest.DONE)
+// // xhr.open("GET", url, false);
+
+// // xhr.onreadystatechange = function () {
+// //     if (xhr.readyState === XMLHttpRequest.DONE) {
+// //         if (xhr.status === 200) {
+// //             const responseData = JSON.parse(xhr.responseText);
+// //             console.log(responseData); // Process the received data here
+// //         } else {
+// //             console.error("Error occurred while fetching data.");
+// //         }
+// //     }
+// // };
+// // xhr.send();
+// // console.log("asyncronous operation");
+
+// //=======================THE END=========================//
+
+
+// // function sum() {
+// //   console.log(arguments.length);
+// // }
+// // sum(1, 2, 3, 4);
+// // ------------------------//
+
+// // function greet(name) {
+// //   console.log(`Hello, ${name}!`);
+// // }
+// // function greet(firstName, lastName) {
+// //   console.log(`Hello, ${firstName} ${lastName}!`);
+// // }
+// // greet("Alice"); // This will not work as expected, it will call the second version
+// // greet("Bob", "Smith"); // This will work and call the second version
+
+// // --------------------------------------------------//
+// // const myPromise = new Promise((resolve, reject) => {
+// //   setTimeout(() => {
+// //     const success = false;
+// //     if (success) {
+// //       resolve("operation succesful")
+// //     } else {
+// //       reject("operation failed");
+// //     }
+// //   }, 1000);
+// // })
+
+// // myPromise.then((result) => console.log(result)).catch(err => console.log(err));
+// // -------------------------------------//
+
+// // const fetchData = async () => {
+// //   try {
+// //     const response = await fetch('https://jsonplaceholder.typicode.com/todos');
+// //     const data = await response.json();
+// //     console.log(data);
+// //   } catch (err) {
+// //     console.log(err)
+// //     throw err;
+// //   }
+// // }
+// // fetchData();
+// // console.log('data')
+// // --------------------------------------//
+// // async function fetchData(url) {
+// //   try {
+// //     const response = await fetch(url);
+// //     if (!response.ok) {
+// //       throw new Error(`HTTP error! Status: ${response.status}`);
+// //     }
+// //     const data = await response.json();
+// //     console.log('Data:', data);
+// //   } catch (error) {
+// //     console.error('Fetch error:', error);
+// //   }
+// // }
+
+// // fetchData('https://api.example.com/data');
+
+// // --------------------------------------------------------------//
+// // const Person = {
+// //   name: 'divya',
+// //   age: 23,
+// //   gender: 'male',
+// //   occ: 'student'
+// // }
+// // for (let i in Person) {
+// //   console.log(Person[i]);
+// // }

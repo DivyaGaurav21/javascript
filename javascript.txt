@@ -1,0 +1,350 @@
+                                                 JAVASCRIPT INTERVIEW QUESTION
+================HOW JS WORKS=================
+
+Which of the following best describes an execution context?
+===================
+An execution context refers to the environment in which a piece of code is executed. 
+It includes the variables, functions, and objects that are accessible at a given 
+point in the code's execution.
+
+When is the global execution context created in a program?
+==================
+The global execution context is the default execution context that represent
+s the global scope of a program. It is created when the program starts running and
+ remains active throughout its execution.
+
+ What happens when multiple JS files are linked in a single HTML file?
+ =================
+ When multiple JavaScript files are linked in a single HTML file, a single execution
+  context is created for all js files. In JS, only one execution context is possible for 
+  a single html file.
+
+When does hoisting occur in JavaScript?
+==================
+During the Creation phase, the JavaScript engine scans through the code and identifies 
+variable and function declarations. It allocates memory for variables and creates
+ references for functions in the memory.
+
+Which is the recommended practice to avoid confusion of variables having value of 
+undefined due to hoisting?
+==================
+To avoid hoisting-related confusion in JavaScript, it's best practice to declare
+ variables and functions at the top of their scope so that when you use a variable, 
+ it has already been initialized.
+
+What is the purpose of the call stack in JS?
+=================
+The call stack in JavaScript manages the execution context of functions, tracks the order
+ of function calls, and handles errors and exceptions during code execution.
+
+ Which approach is followed by Call Stack?
+ ================
+ The call stack is implemented on stack data structure and follows LIFO principle. So the last
+  element added to the call stack will get executed first.
+--------------------------------------------------------------------------------------------------------------------------------------
+[1]. What is the difference between a function declaration and a function expression?
+=====================>
+A function declaration is a way of defining a function using the function keyword with a specified function name.
+function add(a, b) {
+  return a + b;
+}--
+while A function expression is a way of defining a function as a value assigned to a variable or a property of an object.
+const multiply = function(a, b) {
+  return a * b;
+};
+Function declarations are hoisted to the top of their scope. This means you can call the function before the 
+function declaration in your code.
+while Function expressions are not hoisted like function declarations. You must define the function before 
+calling it in your code.
+console.log(add(2, 3)); // Output: 5
+function add(a, b) {
+  return a + b;
+}
+
+console.log(subtract(5, 2)); // Error: subtract is not a function
+const subtract = function(a, b) {
+  return a - b;
+};
+-------------------------------------------------------------------------------------------------------------------------------------
+[2]. What are the different ways to create an array in JavaScript?
+=====================>
+the most common ways to create an array
+1) Array Literal Syntax:
+   const fruits = ['apple', 'banana', 'orange'];
+2)Array Constructor:You can create an array using the Array constructor.
+   const numbers = new Array(1, 2, 3, 4, 5);
+3)Empty Array:You can create an empty array without any elements.
+  const emptyArray = [];
+4)Array object: by using Array of and from method
+  const numbers = Array.from([1, 2, 3, 4, 5]);
+  const numbers = Array.of(1, 2, 3, 4, 5);
+-------------------------------------------------------------------------------------------------------------------------------------
+[3]. How does JavaScript handle asynchronous programming, 
+     and what are the different approaches for handling asynchronous tasks?
+====================>
+Asynchronous programming in JavaScript allows tasks to happen independently without waiting for each other to finish.
+ This is helpful for tasks that take time, like fetching data from a server.
+
+The different ways to handle asynchronous tasks are:
+
+Callbacks: A function is given to an asynchronous task, and when it's done, it calls that function with the result.
+
+Promises: Promises make handling asynchronous tasks more organized. They represent future results and let you use .then()
+ to handle success and .catch() to handle errors.
+
+Async/Await: Async/await is a modern way to write asynchronous code. 
+ It uses async functions and await to make it look more like regular synchronous code.
+
+Event Listeners: This approach is used for handling events like button clicks.
+ When the event happens, a function is called to do the asynchronous task.
+
+--------------------------------------------------------------------------------------------------------------------------------------
+1. What is JavaScript, and what are its key features?
+2. Explain the differences between null and undefined in JavaScript.
+3. Describe the scope and hoisting in JavaScript.
+4. What are closures in JavaScript, and how do they work?
+5. Explain the Event Loop in JavaScript, and how it handles asynchronous operations.
+6. What is the difference between let, const, and var for variable declarations?
+7. What is the purpose of the this keyword in JavaScript? How is its value determined?
+8. How does prototypal inheritance work in JavaScript?
+9. Explain the concept of Promises and how they help in handling asynchronous operations.
+10. How can you handle errors in JavaScript using try...catch blocks?
+11. What is the async keyword in JavaScript, and how is it used with functions?
+12. How can you convert a callback-based asynchronous function to use Promises?
+13. Describe the differences between map(), forEach(), filter(), and reduce() array methods.
+14. What is the purpose of the bind() method in JavaScript?
+15. How can you handle and avoid callback hell in JavaScript?
+16. What are Arrow functions, and how are they different from regular functions?
+17. Explain the concept of Event Bubbling and Event Capturing in the DOM.
+18. What is the difference between == and === in JavaScript?
+19. How can you prevent the default behavior of an event in JavaScript?
+20. Describe how you can detect if an object has a certain property in JavaScript.
+21. Explain the differences between localStorage, sessionStorage, and cookies.
+22. How can you clone an object in JavaScript?
+23. What are the different ways to iterate over an object in JavaScript?
+24. How can you remove an element from an array in JavaScript?
+25. Describe how you can handle Cross-Origin Resource Sharing (CORS) in JavaScript.
+26. How can you handle and optimize performance in JavaScript?
+27. What are the differences between class and prototype in JavaScript?
+28. How can you detect the browser's type and version using JavaScript?
+29. Explain the difference between synchronous and asynchronous JavaScript.
+30. How can you use strict mode in JavaScript, and what are its benefits?
+31. Explain what are generator functions and how to use them in JavaScript?
+32. What are rest parameters and spread syntax in JavaScript?
+33. How does the let statement help with block-scoped variables?
+34. What are the differences between ES5 and ES6 (ECMAScript 2015) in JavaScript?
+35. Explain the usage of the fetch() API to make network requests in JavaScript.
+36. What are modules in JavaScript, and how can you use them (CommonJS vs. ES6 modules)?
+37. How can you handle memory leaks in JavaScript?
+38. Explain the differences between == and === when comparing objects in JavaScript.
+39. What is the purpose of the Object.keys() and Object.entries() methods in JavaScript?
+40. How can you convert a string to a number in JavaScript?
+41. Describe the differences between async/await and Promise for handling asynchronous code.
+42. What are JavaScript decorators, and how can you use them?
+43. Explain the concept of currying in JavaScript.
+44. How can you create and dispatch custom events in JavaScript?
+45. What is the difference between the map() and flatMap() methods in JavaScript?
+46. Explain the difference between delete and setting a property to null in JavaScript.
+47. How can you check if an array includes a certain value in JavaScript?
+48. What is the purpose of the Symbol data type in JavaScript?
+49. Explain the differences between the spread operator and the Object.assign() method.
+50. How can you implement inheritance in JavaScript without using ES6 classes?
+----------------------------------------------
+Sure! Here are some important interview questions related to JavaScript:
+
+1. What is JavaScript, and how does it differ from Java?
+2. How do you declare variables in JavaScript? What are the differences between `var`, `let`, and `const`?
+3. How does JavaScript handle asynchronous programming, and what are the different approaches for handling asynchronous tasks?
+4. Explain the concept of closures in JavaScript. Provide an example to illustrate their usage.
+5. How does prototypal inheritance work in JavaScript? Explain the difference between classical inheritance and prototypal inheritance.
+6. What is the Event Loop in JavaScript? How does it enable non-blocking behavior in JavaScript applications?
+7. How do you handle errors and exceptions in JavaScript? Describe the purpose of `try...catch` blocks.
+8. Explain the concept of hoisting in JavaScript. Give examples of hoisting with variables and functions.
+9. What are the different data types in JavaScript? How do you check the type of a variable?
+10. How do you create and use anonymous functions in JavaScript?
+11. Describe the difference between synchronous and asynchronous code execution in JavaScript.
+12. Explain how the `this` keyword works in JavaScript. Provide examples to demonstrate different scenarios where `this` behaves differently.
+13. How can you prevent or handle memory leaks in JavaScript applications?
+14. Describe the concept of event delegation in JavaScript. How does it optimize event handling?
+15. What are the different ways to loop over objects and arrays in JavaScript? Explain the differences between them.
+16. How can you achieve module-based organization in JavaScript using CommonJS or ES6 modules?
+17. Explain the concept of Promises in JavaScript. How do they help in handling asynchronous operations?
+18. What is the purpose of the `bind`, `call`, and `apply` methods in JavaScript? Provide examples of their usage.
+19. How do you handle cross-origin requests in JavaScript? What are CORS and JSONP?
+20. Describe the differences between `null` and `undefined` in JavaScript.
+
+Remember, these are just a selection of potential JavaScript interview questions, and the depth of the questions may vary depending on the level of the interview. Preparing for these questions will help you build a solid foundation for your JavaScript knowledge and increase your chances of performing well in interviews. Good luck! 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-------------------------------------------------
+
+const movie1 = {
+  title: 'The Avengers',
+  year: 2012,
+  genre: 'Action, Sci-Fi, Thriller',
+  cast: {
+    main_lead: 'Robert Downey Jr.',
+    others: 'Chris Evans',
+  },
+
+  getDetails() {
+    console.log(`
+      Title: ${this.title}
+      Year: ${this.year}
+      Genre: ${this.genre}
+      Cast: ${this.cast}
+      `);
+  },
+};
+movie1.getDetails();
+
+const movie2 = {
+  title: 'Movie2',
+  year: 2018,
+  genre: 'Action, Sci-Fi, Thriller',
+  cast: {
+    main_lead: 'Robert Downey Jr.',
+    others: 'Chris Evans',
+  },
+
+  getDetails() {
+    console.log(`
+        Title: ${this.title}
+        Year: ${this.year}
+        Genre: ${this.genre}
+        Cast: ${this.cast}
+        `);
+  },
+};
+movie2.getDetails();
+
+
+----------------------------
+function movie(title, year) {
+  const movieObj = {
+    title: title,
+    year: year,
+    getDetails() {
+      console.log(`
+                  Title: ${this.title}
+                  Year: ${this.year}
+                  `);
+    },
+  };
+  return movieObj;
+}
+
+const movie1 = movie('The Avengers', 2012);
+console.log(movie1);
+movie1.getDetails();
+
+//Constructor Function
+
+function Movie(title, year) {
+  this.title = title;
+  this.year = year;
+
+  this.getDetails = function () {
+    console.log(`
+                  Title: ${this.title}
+                  Year: ${this.year}
+                  `);
+  };
+}
+
+//new keyword
+
+const movie2 = new Movie('Avatar', 2013);
+console.log(movie2);
+movie2.getDetails();
+
+-------------------------------------
+function Movie(title) {
+  this.title = title;
+}
+
+const movie1 = new Movie('The Avengers');
+
+movie1.year = 2012;
+console.log(movie1);
+console.log(movie1.__proto__);
+
+const movie2 = new Movie('Avatar');
+console.log(movie2);
+console.log(movie2.__proto__.__proto__);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1.The findIndex method is used to find the index of the first element in the array that satisfies a given condition. It returns the index of the first element that matches the condition, or -1 if no such element is found.
+const numbers = [10, 20, 30, 40, 50];
+
+const index = numbers.findIndex(num => num > 25);
+console.log(index); // Output: 2
+
+2.find()
+The find method is used to find the first element in the array that satisfies a given condition. It returns the value of the first element that matches the condition, or undefined if no such element is found.
+
+const numbers = [10, 20, 30, 40, 50];
+
+const foundNumber = numbers.find(num => num > 25);
+console.log(foundNumber); // Output: 30
+
+
+
+
+const fruits = [
+  'Apple',
+  'Mango',
+  'Kiwi',
+  'Berry',
+  'banana',
+  'lichi',
+];
+
+//Binding Pattern
+
+// const [a, , , k] = fruits;
+// console.log(a, k);
+
+const [a, m, ...[, be, ba]] = fruits;
+console.log(ba);
+
+
+  

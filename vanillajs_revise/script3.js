@@ -32,66 +32,66 @@
 //   console.log('check code flow');
 //   -------------------->
 // ---------------------------IMPORTANT -----------------------------------//
-// Callbacks can be synchronous or asynchronous:The nature of a callback function 
+// Callbacks can be synchronous or asynchronous:The nature of a callback function
 // depends on how it is implemented and where it is used in the code.
 // function myDisplayer(some) {
-//     console.log(some);
-//   }
-//   function myCalculator(num1, num2, myCallback) {
-//     let sum = num1 + num2;
-//     myCallback(sum);
-//   }
-//   myCalculator(5, 5, myDisplayer);
-//   console.log('check code flow');
+//   console.log(some);
+// }
+// function myCalculator(num1, num2, myCallback) {
+//   let sum = num1 + num2;
+//   myCallback(sum);
+// }
+// myCalculator(5, 5, myDisplayer);
+// console.log('check code flow');
 // ------------------------------->
 // function myDisplayer(some) {
-//     setTimeout(() => console.log(some) ,2000)
-//   }
-//   function myCalculator(num1, num2, myCallback) {
-//     let sum = num1 + num2;
-//     myCallback(sum);
-//   }
-//   myCalculator(6, 5, myDisplayer);
-//   console.log('check code flow');
+//   setTimeout(() => console.log(some), 2000)
+// }
+// function myCalculator(num1, num2, myCallback) {
+//   let sum = num1 + num2;
+//   myCallback(sum);
+// }
+// myCalculator(6, 5, myDisplayer);
+// console.log('check code flow');
 // ----------------------------------->
 // function syncFunction(callback) {
-//     console.log("Doing something before the callback");
-//     callback();
-//     console.log("Doing something after the callback");
-//   }
-//   syncFunction(function() {
-//     console.log("This is a synchronous callback");
-//   });
+//   console.log("Doing something before the callback");
+//   callback();
+//   console.log("Doing something after the callback");
+// }
+// syncFunction(function () {
+//   console.log("This is a synchronous callback");
+// });
 //   ----------------------------------->
 // function asyncFunction(callback) {
-//     console.log("Doing something before the callback");
-//     setTimeout(function() {
-//       console.log("This is an asynchronous callback");
-//       callback();
-//     }, 1000);
-//   }
-//   asyncFunction(function() {
-//     console.log("Callback executed after 1 second");
-//   });
+//   console.log("Doing something before the callback");
+//   setTimeout(function () {
+//     console.log("This is an asynchronous callback");
+//     callback();
+//   }, 1000);
+// }
+// asyncFunction(function () {
+//   console.log("Callback executed after 1 second");
+// });
 // ------------------------------------->
 // Simulated function to load users asynchronously
 // function loadUsers(callback) {
-//     setTimeout(function() {
-//       const users = [
-//         { id: 1, name: "Alice" },
-//         { id: 2, name: "Bob" },
-//         { id: 3, name: "Charlie" },
-//       ];
-//       callback(users);
-//     }, 2000);
-//   }
-//   function displayUsers(users) {
-//     console.log("Loaded Users:");
-//     users.forEach(function(user) {
-//       console.log(user.name);
-//     });
-//   }
-//   loadUsers(displayUsers);
+//   setTimeout(function () {
+//     const users = [
+//       { id: 1, name: "Alice" },
+//       { id: 2, name: "Bob" },
+//       { id: 3, name: "Charlie" },
+//     ];
+//     callback(users);
+//   }, 2000);
+// }
+// function displayUsers(users) {
+//   console.log("Loaded Users:");
+//   users.forEach(function (user) {
+//     console.log(user.name);
+//   });
+// }
+// loadUsers(displayUsers);
 
 //============================NESTED CALLBACK================================//
 //-------Function to perform an operation synchronously----------------------//
@@ -99,16 +99,16 @@
 //     console.log(`Processing data: ${data}`);
 //     callback();
 //   }
-  
+
 //   // Nested synchronous callbacks
 //   console.log("Start of the program");
-  
+
 //   syncOperation("Step 1", function() {
 //     console.log("Step 1 completed.");
-    
+
 //     syncOperation("Step 2", function() {
 //       console.log("Step 2 completed.");
-      
+
 //       syncOperation("Step 3", function() {
 //         console.log("Step 3 completed.");
 //         console.log("End of the program");
@@ -116,7 +116,7 @@
 //     });
 //   });
 //   console.log("flow check ");
-  
+
 //-------Function to perform an operation Asynchronously----------------------//
 
 // Simulated function to fetch user data from an API asynchronously
@@ -137,13 +137,13 @@
 //         { id: 2, title: "Post 2", content: "This is the second post." },
 //       ];
 //       callback(userPosts);
-//     }, 1500); 
+//     }, 1500);
 //   }
 //   // Function to fetch user data and their posts using nested callbacks
 //   function fetchUserDataAndPosts(userId) {
 //     fetchUserData(userId, function(userData) {
 //       console.log("User Data:", userData);
-  
+
 //       fetchUserPosts(userId, function(userPosts) {
 //         console.log("User Posts:", userPosts);
 //       });
@@ -170,10 +170,10 @@
 //   function performOperations(num1, num2) {
 //     addAsync(num1, num2, function(sumResult) {
 //       console.log(`Sum: ${sumResult}`);
-  
+
 //       multiplyAsync(sumResult, num2, function(multiplyResult) {
 //         console.log(`Multiplication: ${multiplyResult}`);
-  
+
 //         const finalResult = multiplyResult / num1;
 //         console.log(`Final Result: ${finalResult}`);
 //         // setTimeout(() => console.log(finalResult) , 1000)
@@ -191,7 +191,7 @@
 //       callback();
 //     }, 2000); // Simulating a delay of 2 seconds for preheating
 //   }
-  
+
 //   // Function to perform the second step: Prepare the cake mix
 //   function prepareCakeMix(callback) {
 //     console.log("Step 2: Preparing the cake mix...");
@@ -200,7 +200,7 @@
 //       callback();
 //     }, 1500); // Simulating a delay of 1.5 seconds for preparation
 //   }
-  
+
 //   // Function to perform the third step: Pour the cake mix into a baking pan
 //   function pourIntoBakingPan(callback) {
 //     console.log("Step 3: Pouring the cake mix into the baking pan...");
@@ -209,7 +209,7 @@
 //       callback();
 //     }, 1000); // Simulating a delay of 1 second for pouring
 //   }
-  
+
 //   // Function to perform the final step: Bake the cake in the oven
 //   function bakeCake(callback) {
 //     console.log("Step 4: Baking the cake...");
@@ -218,18 +218,18 @@
 //       callback();
 //     }, 3000); // Simulating a delay of 3 seconds for baking
 //   }
-  
+
 //   // Nested callbacks to perform the cooking process
-//   preheatOven(180, function() {
-//     prepareCakeMix(function() {
-//       pourIntoBakingPan(function() {
-//         bakeCake(function() {
-//           console.log("All done! Cake is ready to be served.");
-//         });
+// preheatOven(180, function () {
+//   prepareCakeMix(function () {
+//     pourIntoBakingPan(function () {
+//       bakeCake(function () {
+//         console.log("All done! Cake is ready to be served.");
 //       });
 //     });
 //   });
-  
+// });
+
 // --------------------------->
 // const myNumbers = [4, 1, -20, -7, 5, 9, -6];
 // function removeNeg(numbers, callback) {
@@ -248,10 +248,10 @@
 
 // ==================================PROMISE==================================//
 // In JavaScript, a Promise is an object that represents a value that may not
-//  be available yet but will be resolved or rejected at some point in the future. 
+//  be available yet but will be resolved or rejected at some point in the future.
 //  Promises provide a clean and structured way to handle asynchronous operations
-//  and manage the flow of data between asynchronous tasks. They were introduced 
-// to address the issue of "callback hell" and make asynchronous code more readable 
+//  and manage the flow of data between asynchronous tasks. They were introduced
+// to address the issue of "callback hell" and make asynchronous code more readable
 // and maintainable.
 
 // A Promise can be in one of three states:
@@ -262,7 +262,7 @@
 // Rejected: The state when the asynchronous operation encounters
 //   an error, and the Promise has a reason for rejection.
 
-// syntax 
+// syntax
 // const myPromise = new Promise((resolve, reject) => {
 //     // Asynchronous operation here, which will eventually call resolve() or reject()
 // "Producing Code" (May take some time)
@@ -289,7 +289,7 @@
 //   .catch((error) => {
 //     // Handle any error that occurred in any of the tasks
 //   });
-  
+
 // --------------------------promise example code--------------------------------------//
 // Function to fetch data asynchronously using a Promise
 // function fetchDataFromAPI() {
@@ -304,10 +304,10 @@
 //       }, 2000);
 //     });
 //   }
-  
+
 //   // Using the Promise to fetch data and handle the result
 //   console.log("Start of the program");
-  
+
 //   fetchDataFromAPI()
 //     .then((data) => {
 //       console.log("Received data:", data);
@@ -318,7 +318,7 @@
 //     .finally(() => {
 //       console.log("End of the program");
 //     });
-  
+
 // console.log("flow check")
 // ------------------------------------->
 
@@ -393,16 +393,16 @@
 // async makes a function return a Promise
 // await makes a function wait for a Promise
 
-// async/await is a modern JavaScript feature  that provides a more 
-// synchronous-like syntax for handling asynchronous operations. It makes working 
+// async/await is a modern JavaScript feature  that provides a more
+// synchronous-like syntax for handling asynchronous operations. It makes working
 // with Promises and other asynchronous code more readable and easier to
-//  manage. Instead of chaining .then() and .catch() methods, 
+//  manage. Instead of chaining .then() and .catch() methods,
 
 // async/await allows you to write asynchronous code that looks similar
 //  to synchronous code,and avoiding callback hell.
 
 // The async keyword is used to define an asynchronous function, and within
-//  an asynchronous function, you can use the await keyword to pause the 
+//  an asynchronous function, you can use the await keyword to pause the
 //  execution of the function until a Promise is resolved. When using await, the
 //   function will not continue until the awaited Promise is fulfilled or rejected.
 
@@ -410,7 +410,7 @@
 // The await keyword makes the function pause the execution and wait for
 //  a resolved promise before it continues:
 
-// async/await syntax: 
+// async/await syntax:
 // async function myAsyncFunction() {
 //     // Code before await
 //     try {
@@ -420,91 +420,91 @@
 //       // Handle errors if the Promise is rejected
 //     }
 //   }
-  
+
 // --------------------------->
 // Function to fetch data asynchronously using fetch and async/await
 // async function fetchDataFromApi(url) {
-//     const response = await fetch(url);
-//     if (!response.ok) {
-//       throw new Error(`Failed to fetch data from ${url}, status: ${response.status}`);
-//     }
-//     const data = await response.json();
-//     return data;
+//   const response = await fetch(url);
+//   if (!response.ok) {
+//     throw new Error(`Failed to fetch data from ${url}, status: ${response.status}`);
 //   }
-//   // Usage of the async/await function to fetch data and handle the result
-//   const apiUrl = 'https://jsonplaceholder.typicode.com/todos';
+//   const data = await response.json();
+//   return data;
+// }
+// // Usage of the async/await function to fetch data and handle the result
+// const apiUrl = 'https://jsonplaceholder.typicode.com/todos';
 
-//   console.log("Start fetching data...");
-//   const requiresData =async () => {
-//     try {
-//       const data = await fetchDataFromApi(apiUrl);
-//       console.log("Received data:", data);
-//     } catch (error) {
-//       console.error("Error fetching data:", error.message);
-//     } finally {
-//       console.log("End of the program");
-//     }
-//   };
+// console.log("Start fetching data...");
+// const requiresData = async () => {
+//   try {
+//     const data = await fetchDataFromApi(apiUrl);
+//     console.log("Received data:", data);
+//   } catch (error) {
+//     console.error("Error fetching data:", error.message);
+//   } finally {
+//     console.log("End of the program");
+//   }
+// };
 
-//   requiresData();
-//   console.log("check code flow");
+// requiresData();
+// console.log("check code flow");
 
 // ----------------------------------->
 // Function to fetch data asynchronously using fetch and async/await
 // async function fetchDataFromApi(url) {
-//     const response = await fetch(url);
-//     if (!response.ok) {
-//       throw new Error(`Failed to fetch data from ${url}, status: ${response.status}`);
-//     }
-//     const data = await response.json();
-//     return data;
+//   const response = await fetch(url);
+//   if (!response.ok) {
+//     throw new Error(`Failed to fetch data from ${url}, status: ${response.status}`);
 //   }
-  // Function to fetch data from multiple APIs and process the results sequentially
-//   async function fetchAndProcessData() {
-//     const apiUrl1 = 'https://jsonplaceholder.typicode.com/posts';
-//     const apiUrl2 = 'https://jsonplaceholder.typicode.com/comments';
-  
-//     try {
-//       // Fetch data from the first API
-//       const postsData = await fetchDataFromApi(apiUrl1);
-//       console.log("Posts Data:", postsData);
-  
-//       // Fetch data from the second API
-//       const commentsData = await fetchDataFromApi(apiUrl2);
-//       console.log("Comments Data:", commentsData);
-  
-//       // Perform additional operations with the data
-//       // ...
-//     } catch (error) {
-//       console.error("Error fetching data:", error.message);
-//     }
+//   const data = await response.json();
+//   return data;
+// }
+// // Function to fetch data from multiple APIs and process the results sequentially
+// async function fetchAndProcessData() {
+//   const apiUrl1 = 'https://jsonplaceholder.typicode.com/posts';
+//   const apiUrl2 = 'https://jsonplaceholder.typicode.com/comments';
+
+//   try {
+//     // Fetch data from the first API
+//     const postsData = await fetchDataFromApi(apiUrl1);
+//     console.log("Posts Data:", postsData);
+
+//     // Fetch data from the second API
+//     const commentsData = await fetchDataFromApi(apiUrl2);
+//     console.log("Comments Data:", commentsData);
+
+//     // Perform additional operations with the data
+//     // ...
+//   } catch (error) {
+//     console.error("Error fetching data:", error.message);
 //   }
-  
-//   // Usage of the async/await function to fetch and process data
-//   console.log("Start fetching and processing data...");
-  
-//   fetchAndProcessData().finally(() => {
-//     console.log("End of the program");
-//   });
+// }
+
+// //   // Usage of the async/await function to fetch and process data
+// console.log("Start fetching and processing data...");
+
+// fetchAndProcessData().finally(() => {
+//   console.log("End of the program");
+// });
 
 // --------------------->
 // async function myDisplay() {
-//     let myPromise = new Promise(function(resolve) {
-//       resolve("I love You !!");
-//     });
-//      return myPromise;
-//   }
-  
+//   let myPromise = new Promise(function (resolve) {
+//     resolve("I love You !!");
+//   });
+//   return myPromise;
+// }
+
 // myDisplay().then(res => console.log(res))
 
 // %%%%%%%%%%%%%%%%%%%%%%%%%%% JSON %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%//
-  
+
 // JSON stands for JavaScript Object Notation
 // JSON is a lightweight data-interchange format
 // JSON is plain text written in JavaScript object notation
 // JSON is used to send data between computers
 // JSON is language independent *
-// The JSON syntax is derived from JavaScript object notation, 
+// The JSON syntax is derived from JavaScript object notation,
 // but the JSON format is text only.
 
 // JavaScript has a built in function for converting JSON strings into
@@ -517,11 +517,11 @@
 
 // You can receive pure text from a server and use it as a JavaScript object.
 // You can send a JavaScript object to a server in pure text format.
-// You can work with data as JavaScript objects, with no complicated 
+// You can work with data as JavaScript objects, with no complicated
 // parsing and translations.
 // JSON makes it possible to store JavaScript objects as text.
 
-// SYNTAX: 
+// SYNTAX:
 // Data is in name/value pairs
 // Data is separated by commas
 // Curly braces hold objects
@@ -558,23 +558,23 @@
 //     }
 //     return innerFunction;
 //   }
-  
+
 //   const closureExample = outerFunction();
 //   closureExample(); // Output: "Hello"
-  
+
 // --------------------------->
 // function createCounter() {
-//     let count = 0;
-//     function increment() {
-//       count++;
-//       console.log(count);
-//     }
-//     return increment;
+//   let count = 0;
+//   function increment() {
+//     count++;
+//     console.log(count);
 //   }
-  
-//   const counter = createCounter();
-//   counter(); // Output: 1
-//   counter(); // Output: 2
+//   return increment;
+// }
+
+// const counter = createCounter();
+// counter(); // Output: 1
+// counter(); // Output: 2
 // ----------------------------->
 // function createPerson(name) {
 //     let age = 30; // Private variable
@@ -596,27 +596,27 @@
 //   person.getDetails(); // Output: "Name: John, Age: 35"
 // ---------------------------------->
 // function createEmployee(name) {
-//     let salary = 50000;
-  
-//     function getSalary() {
-//       return salary;
-//     }
-  
-//     function increaseSalary(amount) {
-//       salary += amount;
-//     }
+//   let salary = 50000;
 
-//     return {
-//       name,
-//       getSalary,
-//       increaseSalary,
-//     };
+//   function getSalary() {
+//     return salary;
 //   }
-//   const employee = createEmployee("Alice");
-//   console.log(employee.name); // Output: "Alice"
-//   console.log(employee.getSalary()); // Output: 50000
-//   employee.increaseSalary(5000);
-//   console.log(employee.getSalary()); // Output: 55000
+
+//   function increaseSalary(amount) {
+//     salary += amount;
+//   }
+
+//   return {
+//     name,
+//     getSalary,
+//     increaseSalary,
+//   };
+// }
+// const employee = createEmployee("Alice");
+// console.log(employee.name); // Output: "Alice"
+// console.log(employee.getSalary()); // Output: 50000
+// employee.increaseSalary(5000);
+// console.log(employee.getSalary()); // Output: 55000
 // --------------------------------------->
 // function doSomethingAsync(callback) {
 //     setTimeout(function() {
@@ -624,11 +624,11 @@
 //       callback();
 //     }, 1000);
 //   }
-  
+
 //   function callbackFunction() {
 //     console.log("Callback function executed");
 //   }
-  
+
 //   doSomethingAsync(callbackFunction);
 // --------------------------------------------->
 // function add(x) {
@@ -636,91 +636,90 @@
 //       return x + y;
 //     };
 //   }
-  
+
 //   const add5 = add(5);
 //   console.log(add5(3)); // Output: 8
 //   console.log(add5(7)); // Output: 12
 // -------------------------------------------->
 // Currying using Closure:
 // function multiply(x) {
-//     return function(y) {
-//       return function(z) {
-//         return x * y * z;
-//       };
-//     };
-//   }
-  
-//   console.log(multiply(2)(3)(4)); // Output: 24
+//   return function (y) {
+//     return x * y;
+//   };
+// }
+
+// console.log(multiply(2)(3)); // Output: 24
 
 // ====================INTERVIEW IMPORTANT QUESTION ==========================//
 
 //------------------------------------------------------//
 //--------Check if a number is prime.------------------//
 // function isPrime(num) {
-//     if (num <= 1) return false;
-//     for (let i = 2; i <= Math.sqrt(num); i++) {
-//       if (num % i === 0) {
-//         return false;
-//       }
+//   if (num <= 1) return false;
+//   for (let i = 2; i <= Math.sqrt(num); i++) {
+//     if (num % i === 0) {
+//       return false;
 //     }
-//     return true;
 //   }
-  
-//   console.log(isPrime(17)); // Output: true
+//   return true;
+// }
+
+// console.log(isPrime(17)); // Output: true
 
 //------------------------------------------------------//
 //--------Find the intersection of two arrays.---------//
 // function findIntersection(arr1, arr2) {
-//     const set1 = new Set(arr1);
-//     const set2 = new Set(arr2);
-//     return Array.from(set1).filter((num) => set2.has(num));
-//   }
-//  console.log(findIntersection([1, 2, 3, 4], [3, 4, 5, 6])); // Output: [3, 4]
-  
+//   const set1 = new Set(arr1);
+//   const set2 = new Set(arr2);
+//   return Array.from(set1).filter((num) => set2.has(num));
+// }
+// console.log(findIntersection([1, 2, 3, 4], [3, 4, 5, 6])); // Output: [3, 4]
+
 
 //--------------------------------------------------------//
 // ---Find the first non-repeated character in a string.--//
 // function findFirstNonRepeatedCharacter(str) {
-//     const charCount = {};
-//     for (let char of str) {
-//       charCount[char] = (charCount[char] || 0) + 1;
-//     }
-//     for (let char of str) {
-//       if (charCount[char] === 1) {
-//         return char;
-//       }
-//     }
-//     return null;
+//   const charCount = {};
+//   for (let char of str) {
+//     charCount[char] = (charCount[char] || 0) + 1;
 //   }
-  
-//   console.log(findFirstNonRepeatedCharacter("aabbcdee")); // Output: "c"
+//   for (let char of str) {
+//     if (charCount[char] === 1) {
+//       return char;
+//     }
+//   }
+//   return null;
+// }
+
+// console.log(findFirstNonRepeatedCharacter("aabbcdee")); // Output: "c"
 
 // ----------------------------------------------------------//
 // Check if two strings are anagrams//
 //  (contain the same characters in a different order).//
 // function areAnagrams(str1, str2) {
-//     if (str1.length !== str2.length) {
-//       return false;
-//     }
-//     return str1.split("").sort().join("") === str2.split("").sort().join("");
+//   if (str1.length !== str2.length) {
+//     return false;
 //   }
-  
-//   console.log(areAnagrams("listen", "silent")); // Output: true
+//   return str1.split("").sort().join("") === str2.split("").sort().join("");
+// }
+
+// console.log(areAnagrams("listen", "silent")); // Output: true
+
 
 // ----------------------------------------------------------//
 // Given an array of integers, find the sum of //
 // all positive numbers in the array.//
 // function sumOfPositiveNumbers(arr) {
-//     let sum = 0;
-//     for (let num of arr) {
-//       if (num > 0) {
-//         sum += num;
-//       }
+//   let sum = 0;
+//   for (let num of arr) {
+//     if (num > 0) {
+//       sum += num;
 //     }
-//     return sum;
 //   }
-  
-//   const numbers = [2, -4, 6, -8, 10, 1, -3];
-//   console.log(sumOfPositiveNumbers(numbers)); // Output: 19 (2 + 6 + 10 + 1)
-  
+//   return sum;
+// }
+
+// const numbers = [2, -4, 6, -8, 10, 1, -3];
+// console.log(sumOfPositiveNumbers(numbers)); // Output: 19 (2 + 6 + 10 + 1)
+
 // =======================THE END================================//
